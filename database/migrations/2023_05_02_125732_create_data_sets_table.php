@@ -11,12 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('data_sets', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->json('data')->nullable();
-            $table->timestamps();
-        });
+        Schema::create(
+            'data_sets',
+            function (Blueprint $table) {
+                $table->id();
+                $table->string('title');
+                $table->json('data')->nullable();
+                $table->timestamps();
+            }
+        );
     }
 
     /**
